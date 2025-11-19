@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>🌿 Advanced Nursery — Improved</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <h1>🌿 Advanced Nursery</h1>
+    <div class="top-actions">
+      <input id="globalSearch" placeholder="Search plants, species, tags..." />
+      <select id="filterType" title="Filter type">
+        <option value="all">All types</option>
+      </select>
+      <button id="openAuth" class="btn">Login / Register</button>
+      <button id="themeToggle" class="btn secondary">Dark</button>
+      <button id="openCart" class="btn">Cart (<span id="cartCount">0</span>)</button>
+    </div>
+  </header>
+
+  <main id="mainView" class="container">
+    <aside class="filters">
+      <h3>Filters</h3>
+      <div id="tagList" class="tag-list"></div>
+
+      <h4>Type</h4>
+      <div id="typeList" class="tag-list"></div>
+
+      <h4>Price</h4>
+      <input id="priceMin" type="number" placeholder="Min" />
+      <input id="priceMax" type="number" placeholder="Max" />
+
+      <h4>Sort</h4>
+      <select id="sortBy">
+        <option value="name">Name</option>
+        <option value="price">Price (asc)</option>
+        <option value="stock">Stock (desc)</option>
+      </select>
+    </aside>
+
+    <section class="catalog">
+      <div id="plantsGrid" class="grid" aria-live="polite"></div>
+      <div style="text-align:center;margin:16px 0"><button id="loadMore" class="btn secondary">Load more</button></div>
+    </section>
+  </main>
+
+  <!-- Auth modal -->
+  <div id="authModal" class="panel hidden" aria-hidden="true">
+    <div class="panel-header"><h2>Login / Register</h2><button id="closeAuth" class="btn secondary">Close</button></div>
+    <div class="panel-body">
+      <label>Select role</label>
+      <select id="authRole">
+        <option value="customer">Customer</option>
+        <option value="seller">Seller</option>
+        <option value="admin">Admin</option>
+      </select>
+
+      <div style="margin-top:8px">
+        <input id="a_email" placeholder="Email or phone" />
+        <input id="a_password" placeholder="Password" type="password" />
+        <input id="a_name" placeholder="Full name (for register)" />
+        <div style="display:flex;gap:8px;margin-top:8px">
+          <button id="btnLogin" class="btn">Login</button>
+          <button id="btnRegister" class="btn secondary">Register</button>
+        </div>
+      </div>
+
+      <div style="margin-top:8px;font-size:13px;color:#666">
+        Tip: For admin login choose <strong>Admin</strong> and enter password <strong>DT2025</strong>.
+      </div>
+    </div>
+  </div>
+
+  <!-- Cart / Profile panel -->
+  <div id="cartPanel" class="panel hidden">
+    <div class="panel-header"><h2>Cart</h2><button id="closeCart" class="btn secondary">Close</button></div>
+    <div class="panel-body"><div id="cartMain"></div></div>
+  </div>
+
+  <div id="profilePanel" class="panel hidden">
+    <div class="panel-header"><h2 id="profileTitle">Profile</h2><button id="closeProfile" class="btn secondary">Close</button></div>
+    <div class="panel-body"><div id="profileMain"></div></div>
+  </div>
+
+  <!-- Detail view (hidden until used) -->
+  <main id="detailView" class="detail" style="display:none">
+    <a href="#" id="backLink">← Back to catalog</a>
+    <h2 id="d_name"></h2>
+    <p id="d_species" style="color:#556"></p>
+    <div style="display:flex;gap:18px;align-items:flex-start;margin-top:12px">
+      <img id="d_img" src="" style="width:320px;height:220px;object-fit:cover;border-radius:8px;background:#eef" />
+      <div style="flex:1">
+        <p id="d_info"></p>
+        <p class="price" id="d_price"></p>
+        <p class="stock" id="d_stock"></p>
+
+        <div style="margin-top:12px">
+          <input id="qtyNow" type="number" min="1" value="1" style="width:80px;margin-right:8px" />
+          <button id="addToCartNow" class="btn">Add to cart</button>
+          <button id="reserveNow" class="btn secondary">Reserve</button>
+        </div>
+
+        <div class="reviews">
+          <h3>Reviews</h3>
+          <div id="reviewsList"></div>
+          <div style="margin-top:8px">
+            <input id="rev_name" placeholder="Your name" />
+            <textarea id="rev_text" placeholder="Write a review"></textarea>
+            <div style="display:flex;gap:8px;margin-top:6px"><button id="rev_save" class="btn">Post Review</button></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- Optional fallback dataset -->
+  <script src="app-fallback.js"></script>
+  <!-- Modules -->
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
