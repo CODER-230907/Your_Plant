@@ -1,0 +1,72 @@
+window.FALLBACK_ALL = [
+  {
+    "id":"tree0001",
+    "name":"Neem",
+    "species":"Azadirachta indica",
+    "price":299,
+    "stock":12,
+    "type":"trees",
+    "tags":["medicinal","shade"],
+    "image":"assets/img/neem.jpg",
+    "info":"Hardy tree, good for large gardens",
+    "vendor_id":"seller_demo_1",
+    "createdAt":"2024-01-15T10:30:00.000Z",
+    "updatedAt":"2024-01-15T10:30:00.000Z"
+  },
+  {
+    "id":"indoor0001",
+    "name":"Snake Plant",
+    "species":"Sansevieria trifasciata",
+    "price":249,
+    "stock":6,
+    "type":"indoor",
+    "tags":["low-light","air-purifying"],
+    "image":"assets/img/snake-plant.jpg",
+    "info":"Low maintenance indoor plant",
+    "vendor_id":"seller_demo_2",
+    "createdAt":"2024-01-16T14:20:00.000Z",
+    "updatedAt":"2024-01-16T14:20:00.000Z"
+  },
+  {
+    "id":"herb0001",
+    "name":"Basil",
+    "species":"Ocimum basilicum",
+    "price":39,
+    "stock":50,
+    "type":"herbs",
+    "tags":["edible","fragrant"],
+    "image":"assets/img/basil.jpg",
+    "info":"Great for kitchen gardens",
+    "vendor_id":"seller_demo_1",
+    "createdAt":"2024-01-17T09:15:00.000Z",
+    "updatedAt":"2024-01-17T09:15:00.000Z"
+  },
+  {
+    "id":"flower0001",
+    "name":"Marigold",
+    "species":"Tagetes erecta",
+    "price":89,
+    "stock":25,
+    "type":"flowers",
+    "tags":["festive","colorful"],
+    "image":"assets/img/marigold.jpg",
+    "info":"Bright flowers for gardens and decorations",
+    "vendor_id":"seller_demo_2",
+    "createdAt":"2024-01-18T11:45:00.000Z",
+    "updatedAt":"2024-01-18T11:45:00.000Z"
+  },
+  {
+    "id":"succulent0001",
+    "name":"Aloe Vera",
+    "species":"Aloe barbadensis",
+    "price":199,
+    "stock":15,
+    "type":"succulents",
+    "tags":["medicinal","low-maintenance"],
+    "image":"assets/img/aloe-vera.jpg",
+    "info":"Medicinal plant with soothing properties",
+    "vendor_id":"seller_demo_1",
+    "createdAt":"2024-01-19T16:30:00.000Z",
+    "updatedAt":"2024-01-19T16:30:00.000Z"
+  }
+];
